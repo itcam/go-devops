@@ -1,0 +1,8 @@
+package: github.com/itcam/go-devops
+import:
+- package: /Users/arrow/go/src/github.com/itcam/go-devops
+- package: github.com/codegangsta/negroni
+- package: github.com/gorilla/mux
+- package: github.com/gorilla/sessions
+- package: github.com/joho/godotenv
+- package: golang.org/x/oauth2
