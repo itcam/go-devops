@@ -16,7 +16,7 @@ func Routes(r *gin.Engine) {
 	//session
 	u := r.Group("/api/v1/user")
 
-	//user modify
+	//user route
 	u.POST("/create", CreateUser)
 	u.POST("/updatefullname", UpdateUserFullName)
 	u.POST("/updatemail", UpdateUserEmail)
@@ -29,7 +29,15 @@ func Routes(r *gin.Engine) {
 	u.GET("/getbyemail/:email", GetUserByEmail)
 	u.GET("/getbyphone/:phone", GetUserByPhone)
 	u.GET("/getbyrole/:role", GetUserByRole)
-
 	u.GET("/deluser/:id", DelUser)
+
+	//group route
+	g := r.Group("/api/v1/group")
+	g.POST("/create", CreateGroup)
+	g.POST("/updategroupname", UpdateGroupName)
+	g.POST("/list", ListUserGroup)
+	u.GET("/getbyid/:id", GetGroupById)
+	u.GET("/getbygroupname/:groupname", GetUserByUserGroupName)
+	u.GET("/delgroup/:id", DelUserGroup)
 
 }

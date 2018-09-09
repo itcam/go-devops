@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd536ac-406a-464c-99da-fc0c19c624ce" name="默认" comment="默认">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/app/model/uic/user_group.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/model/uic/user_group.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/controller/uic/user_routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/controller/uic/user_routes.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,7 +87,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="16" />
+          <entry key="go" value="20" />
           <entry key="lock" value="2" />
           <entry key="md" value="1" />
           <entry key="yaml" value="2" />
@@ -96,20 +95,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="16" />
+          <entry key="Go" value="20" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="19" />
+          <entry key="go" value="651" />
           <entry key="yaml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="19" />
+          <entry key="Go" value="651" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -117,6 +116,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app/model/uic/group.go">
           <provider selected="true" editor-type-id="text-editor">
@@ -129,14 +137,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/app/model/uic/user_group.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="472">
+              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding>
                 <element signature="e#13#57#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/app/controller/uic/group_controller.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/app/controller/uic/user_routes.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -163,6 +189,7 @@
       <find>govalidator</find>
       <find>updatero</find>
       <find>delete</find>
+      <find>user</find>
     </findStrings>
     <replaceStrings>
       <replace>Group</replace>
@@ -203,7 +230,6 @@
         <option value="$PROJECT_DIR$/api/app/controller/host/aggreator_controller.go" />
         <option value="$PROJECT_DIR$/api/app/controller/host/hostgroup_controller.go" />
         <option value="$PROJECT_DIR$/api/app/controller/uic/session_controller.go" />
-        <option value="$PROJECT_DIR$/api/app/controller/uic/group_controller.go" />
         <option value="$PROJECT_DIR$/../../masato25/yaag/gin/middleware.go" />
         <option value="$PROJECT_DIR$/api/config/g.go" />
         <option value="$PROJECT_DIR$/api/conf/conf" />
@@ -219,13 +245,14 @@
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/api/app/model/uic/user.go" />
         <option value="$PROJECT_DIR$/api/app/controller/uic/user_controller.go" />
-        <option value="$PROJECT_DIR$/api/app/controller/uic/user_routes.go" />
         <option value="$PROJECT_DIR$/api/app/utils/auth_middle.go" />
         <option value="$PROJECT_DIR$/api/app/controller/routes.go" />
         <option value="$PROJECT_DIR$/test.go" />
         <option value="$PROJECT_DIR$/glide.yaml" />
         <option value="$PROJECT_DIR$/api/app/model/uic/group.go" />
         <option value="$PROJECT_DIR$/api/app/model/uic/user_group.go" />
+        <option value="$PROJECT_DIR$/api/app/controller/uic/group_controller.go" />
+        <option value="$PROJECT_DIR$/api/app/controller/uic/user_routes.go" />
       </list>
     </option>
   </component>
@@ -282,6 +309,28 @@
               <item name="go-devops" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go-devops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-devops" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="uic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go-devops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-devops" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="helper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="go-devops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="go-devops" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -327,15 +376,16 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pkg" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\gocode\src\go-devops\api\app\controller\uic" />
       <recent name="$PROJECT_DIR$/api/app/controller" />
       <recent name="$PROJECT_DIR$/api/app/model/uic" />
       <recent name="$PROJECT_DIR$/auth0-golang-web-app/01-Login" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/pkg" />
     </key>
   </component>
   <component name="RemoteSynchronizer">
@@ -485,7 +535,7 @@
     <frame x="0" y="0" width="1921" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30246577" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30246577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -494,12 +544,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49783862" weight="0.329602" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.82958907" weight="0.097109824" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8290411" visible="true" weight="0.26705202" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.17050439" side_tool="true" visible="true" weight="0.097109824" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1709589" side_tool="true" visible="true" weight="0.26705202" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.72587717" weight="0.5757225" />
       <window_info anchor="bottom" id="RemoteSynchronizer" order="9" sideWeight="0.49927953" weight="0.329602" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
@@ -591,7 +641,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/Cellar/go/1.10.3/libexec/src/net/http/request.go" />
     <entry file="file://$PROJECT_DIR$/release.go" />
     <entry file="file://$PROJECT_DIR$/api/app/controller/host/aggreator_controller.go" />
     <entry file="file://$PROJECT_DIR$/api/app/controller/host/plugins_controller.go" />
@@ -603,7 +652,6 @@
     <entry file="file://$PROJECT_DIR$/cfg.json" />
     <entry file="file://$PROJECT_DIR$/../../satori/go.uuid/generator.go" />
     <entry file="file://$PROJECT_DIR$/api/app/controller/host/hostgroup_controller.go" />
-    <entry file="file://$PROJECT_DIR$/api/app/controller/uic/group_controller.go" />
     <entry file="file://D:/golang.org/x/sys/unix/fcntl.go" />
     <entry file="file://$PROJECT_DIR$/api/app/helper/session.go" />
     <entry file="file://$PROJECT_DIR$/api/conf/app.ini" />
@@ -698,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/controller/uic/user_routes.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/controller/host/host_routes.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -775,13 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/model/uic/group.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -794,11 +828,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/model/uic/user_group.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="472">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding>
             <element signature="e#13#57#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/controller/uic/user_group_routes.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#13#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/controller/uic/group_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/controller/uic/user_routes.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
