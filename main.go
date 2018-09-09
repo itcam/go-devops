@@ -10,8 +10,8 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/gin-gonic/gin"
-	"github.com/itcam/go-devops/api/app/controller"
-	"github.com/itcam/go-devops/api/config"
+	"go-devops/api/app/controller"
+	"go-devops/api/config"
 
 	"github.com/spf13/viper"
 )

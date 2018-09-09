@@ -5,9 +5,9 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/asaskevich/govalidator"
 	"github.com/gin-gonic/gin"
-	h "github.com/itcam/go-devops/api/app/helper"
-	"github.com/itcam/go-devops/api/app/model/uic"
-	"github.com/itcam/go-devops/api/app/utils"
+	h "go-devops/api/app/helper"
+	"go-devops/api/app/model/uic"
+	"go-devops/api/app/utils"
 	"net/http"
 	"strconv"
 	"time"
@@ -41,6 +41,7 @@ func CreateUser(c *gin.Context) {
 		h.JSONR(c, http.StatusBadRequest, "", err)
 		return
 	}
+
 	user := new(uic.User)
 	//如果不存在表，就建表
 	if !db.Uic.HasTable(&user) {

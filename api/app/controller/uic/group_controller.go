@@ -1,19 +1,20 @@
 package uic
 
 import (
+	"fmt"
 	log "github.com/Sirupsen/logrus"
 	"github.com/asaskevich/govalidator"
 	"github.com/gin-gonic/gin"
-	h "github.com/itcam/go-devops/api/app/helper"
-	"github.com/itcam/go-devops/api/app/model/uic"
-	"github.com/itcam/go-devops/api/app/utils"
+	h "go-devops/api/app/helper"
+	"go-devops/api/app/model/uic"
+	"go-devops/api/app/utils"
 	"net/http"
 	"strconv"
 	"time"
 )
 
 type APIGroupInput struct {
-	GroupName string `form:"groupname" json:"groupname" binding:"required"`
+	GroupName string `form:"group_name" json:"group_name" binding:"required"`
 }
 
 func CreateGroup(c *gin.Context) {
@@ -34,20 +35,26 @@ func CreateGroup(c *gin.Context) {
 		h.JSONR(c, http.StatusBadRequest, "", err)
 		return
 	}
+
+	fmt.Println("hhh")
+
 	group := new(uic.Group)
 	//如果不存在表，就建表
+
 	if !db.Uic.HasTable(&group) {
 		log.Debug("表不存在")
 		db.Uic.CreateTable(&group)
 	}
 
+	fmt.Println("create table")
+
 	//查询用户名是否已经存在
 
-	db.Uic.Table(group.TableName()).Where("groupname = ?", inputs.GroupName).Scan(&group)
+	db.Uic.Table(group.TableName()).Where("group_name = ?", inputs.GroupName).Scan(&group)
 
 	response := map[string]string{}
 	response["id"] = strconv.Itoa(int(group.ID))
-	response["groupname"] = group.GroupName
+	response["group_name"] = group.GroupName
 
 	if group.ID != 0 {
 		h.JSONR(c, http.StatusBadRequest, response, "组名已经存在")
@@ -65,7 +72,7 @@ func CreateGroup(c *gin.Context) {
 		delete(response, k)
 	}
 	response["id"] = strconv.Itoa(int(group.ID))
-	response["groupname"] = group.GroupName
+	response["group_name"] = group.GroupName
 	h.JSONR(c, http.StatusOK, response, "用户组创建成功")
 	return
 
@@ -73,7 +80,7 @@ func CreateGroup(c *gin.Context) {
 
 type APIGroupUpdateGroupNameInput struct {
 	ID        int    `json:"id" binding:"required"`
-	GroupName string `form:"groupname" json:"groupname" binding:"required"`
+	GroupName string `form:"group_name" json:"group_name" binding:"required"`
 }
 
 func UpdateGroupName(c *gin.Context) {
@@ -93,7 +100,7 @@ func UpdateGroupName(c *gin.Context) {
 	}
 
 	ggroup := map[string]interface{}{
-		"groupname": inputs.GroupName,
+		"group_name": inputs.GroupName,
 	}
 
 	dt := db.Uic.Table(group.TableName()).Where("id = ?", inputs.ID).Update(ggroup)
@@ -104,7 +111,7 @@ func UpdateGroupName(c *gin.Context) {
 
 	response := map[string]string{}
 	response["id"] = strconv.Itoa(int(group.ID))
-	response["groupname"] = inputs.GroupName
+	response["group_name"] = inputs.GroupName
 	h.JSONR(c, http.StatusOK, response, "组名修改成功")
 	return
 }
@@ -117,14 +124,14 @@ func ListUserGroup(c *gin.Context) {
 		ID        uint `gorm:"primary_key"`
 		CreatedAt time.Time
 		UpdatedAt time.Time
-		GroupName string `gorm:"type: varchar(64); not null; column:groupname"`
+		GroupName string `gorm:"type: varchar(64); not null; column:group_name"`
 	}
 
 	var result []grouplist
 	group := new(uic.Group)
 	response := make(map[string][]grouplist)
 
-	dt := db.Uic.Table(group.TableName()).Select("id,created_at,updated_at,groupname").Scan(&result)
+	dt := db.Uic.Table(group.TableName()).Select("id,created_at,updated_at,group_name").Scan(&result)
 	if dt.Error != nil {
 		h.JSONR(c, http.StatusBadRequest, response, dt.Error)
 		return
@@ -144,13 +151,13 @@ func GetGroupById(c *gin.Context) {
 		ID        uint `gorm:"primary_key"`
 		CreatedAt time.Time
 		UpdatedAt time.Time
-		GroupName string `gorm:"type: varchar(64); not null; column:groupname"`
+		GroupName string `gorm:"type: varchar(64); not null; column:group_name"`
 	}
 	id := c.Param("id")
 	group := new(uic.Group)
 	var result grouplist
 	response := make(map[string]grouplist)
-	dt := db.Uic.Table(group.TableName()).Select("id,created_at,updated_at,groupname").Where("id = ?", id).Scan(&result)
+	dt := db.Uic.Table(group.TableName()).Select("id,created_at,updated_at,group_name").Where("id = ?", id).Scan(&result)
 	if dt.Error != nil {
 		h.JSONR(c, http.StatusBadRequest, response, dt.Error)
 		return
@@ -169,13 +176,13 @@ func GetUserByUserGroupName(c *gin.Context) {
 		ID        uint `gorm:"primary_key"`
 		CreatedAt time.Time
 		UpdatedAt time.Time
-		GroupName string `gorm:"type: varchar(64); not null; column:groupname"`
+		GroupName string `gorm:"type: varchar(64); not null; column:group_name"`
 	}
-	groupname := c.Param("groupname")
+	groupname := c.Param("group_name")
 	group := new(uic.Group)
 	var result grouplist
 	response := make(map[string]grouplist)
-	dt := db.Uic.Table(group.TableName()).Select("id,created_at,updated_at,groupname").Where("groupname = ?", groupname).Scan(&result)
+	dt := db.Uic.Table(group.TableName()).Select("id,created_at,updated_at,group_name").Where("group_name = ?", groupname).Scan(&result)
 	if dt.Error != nil {
 		h.JSONR(c, http.StatusBadRequest, response, dt.Error)
 		return
@@ -193,7 +200,7 @@ func DelUserGroup(c *gin.Context) {
 		ID        uint `gorm:"primary_key"`
 		CreatedAt time.Time
 		UpdatedAt time.Time
-		GroupName string `gorm:"type: varchar(64); not null; column:groupname"`
+		GroupName string `gorm:"type: varchar(64); not null; column:group_name"`
 	}
 	id := c.Param("id")
 	group := new(uic.Group)

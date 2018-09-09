@@ -2,8 +2,8 @@ package controller
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/itcam/go-devops/api/app/controller/uic"
-	"github.com/itcam/go-devops/api/app/utils"
+	"go-devops/api/app/controller/uic"
+	"go-devops/api/app/utils"
 )
 
 func StartGin(port string, r *gin.Engine) {
