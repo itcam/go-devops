@@ -1,0 +1,19 @@
+package: go-devops
+import:
+- package: github.com/Sirupsen/logrus
+- package: github.com/asaskevich/govalidator
+- package: github.com/gin-gonic/gin
+- package: github.com/go-sql-driver/mysql
+- package: github.com/itcam/go-devops
+  subpackages:
+  - api/app/controller
+  - api/app/controller/uic
+  - api/app/helper
+  - api/app/model/uic
+  - api/app/utils
+  - api/config
+- package: github.com/jinzhu/gorm
+- package: github.com/satori/go.uuid
+  version: master
+- package: github.com/spf13/viper
+- package: github.com/toolkits/str

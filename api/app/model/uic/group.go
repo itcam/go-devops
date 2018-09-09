@@ -8,7 +8,6 @@ import (
 type Group struct {
 	gorm.Model
 	GroupName string `gorm:"type:varchar(64);not null;column:group_name"`
-	Active    string `gorm:"type:varchar(64);not null;column:Active"`
 }
 
 type GroupSerializer struct {
@@ -17,7 +16,6 @@ type GroupSerializer struct {
 	UpdateAt  time.Time  `json:"update_at"`
 	DeleteAt  *time.Time `json:"delete_at"`
 	GroupName string     `json:"group_name"`
-	Active    string     `json:"Active"`
 }
 
 func (g *Group) Serializer() GroupSerializer {
@@ -27,10 +25,9 @@ func (g *Group) Serializer() GroupSerializer {
 		UpdateAt:  g.UpdatedAt,
 		DeleteAt:  g.DeletedAt,
 		GroupName: g.GroupName,
-		Active:    g.Active,
 	}
 }
 
 func (Group) TableName() string {
-	return "group"
+	return "arrow_group"
 }
