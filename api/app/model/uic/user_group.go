@@ -31,5 +31,5 @@ func (g *UserGroup) Serializer() UserGroupSerializer {
 	}
 }
 func (UserGroup) TableName() string {
-	return "user_group"
+	return "arrow_user_group"
 }
