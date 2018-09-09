@@ -32,8 +32,8 @@ func Routes(r *gin.Engine) {
 	g.POST("/create", CreateGroup)
 	g.POST("/updategroupname", UpdateGroupName)
 	g.POST("/list", ListUserGroup)
-	u.GET("/getbyid/:id", GetGroupById)
-	u.GET("/getbygroupname/:groupname", GetUserByUserGroupName)
-	u.GET("/delgroup/:id", DelUserGroup)
+	g.GET("/getbyid/:id", GetGroupById)
+	g.GET("/getbygroupname/:groupname", GetUserByUserGroupName)
+	g.GET("/delgroup/:id", DelUserGroup)
 
 }

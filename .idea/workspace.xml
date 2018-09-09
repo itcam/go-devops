@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9dd536ac-406a-464c-99da-fc0c19c624ce" name="默认" comment="默认">
+    <list default="true" id="9dd536ac-406a-464c-99da-fc0c19c624ce" name="默认" comment="user_group">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/controller/uic/user_routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/controller/uic/user_routes.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -78,7 +79,7 @@
     <session id="488024937">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="2" />
@@ -87,7 +88,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="20" />
+          <entry key="go" value="21" />
           <entry key="lock" value="2" />
           <entry key="md" value="1" />
           <entry key="yaml" value="2" />
@@ -95,20 +96,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="20" />
+          <entry key="Go" value="21" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="651" />
+          <entry key="go" value="659" />
+          <entry key="txt" value="10" />
           <entry key="yaml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="651" />
+          <entry key="Go" value="659" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -161,8 +164,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/app/controller/uic/user_routes.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="251">
+              <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+              <folding>
+                <element signature="e#13#105#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/app/controller/routes.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="e#20#155#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -533,7 +551,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1921" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30246577" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -544,12 +561,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49783862" weight="0.329602" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.8290411" visible="true" weight="0.26705202" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8290411" weight="0.45433527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1709589" side_tool="true" visible="true" weight="0.26705202" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.1709589" side_tool="true" visible="true" weight="0.45433527" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.72587717" weight="0.5757225" />
       <window_info anchor="bottom" id="RemoteSynchronizer" order="9" sideWeight="0.49927953" weight="0.329602" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
@@ -612,7 +629,8 @@
       <path value="$PROJECT_DIR$/auth0-golang-web-app" />
     </ignored-roots>
     <MESSAGE value="默认" />
-    <option name="LAST_COMMIT_MESSAGE" value="默认" />
+    <MESSAGE value="user_group" />
+    <option name="LAST_COMMIT_MESSAGE" value="user_group" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -749,13 +767,6 @@
     <entry file="file://$PROJECT_DIR$/api/app/controller/host/host_routes.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/controller/routes.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/github.com/satori/go.uuid/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="681">
@@ -860,10 +871,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/controller/routes.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#20#155#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/controller/uic/user_routes.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="251">
+          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
+          <folding>
+            <element signature="e#13#105#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
