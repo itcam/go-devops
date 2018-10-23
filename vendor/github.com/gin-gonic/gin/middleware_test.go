@@ -6,7 +6,6 @@ package gin
 
 import (
 	"errors"
-	"net/http"
 	"strings"
 	"testing"
 
@@ -38,7 +37,7 @@ func TestMiddlewareGeneralCase(t *testing.T) {
 	w := performRequest(router, "GET", "/")
 
 	// TEST
-	assert.Equal(t, http.StatusOK, w.Code)
+	assert.Equal(t, 200, w.Code)
 	assert.Equal(t, "ACDB", signature)
 }
 
@@ -74,7 +73,7 @@ func TestMiddlewareNoRoute(t *testing.T) {
 	w := performRequest(router, "GET", "/")
 
 	// TEST
-	assert.Equal(t, http.StatusNotFound, w.Code)
+	assert.Equal(t, 404, w.Code)
 	assert.Equal(t, "ACEGHFDB", signature)
 }
 
@@ -111,7 +110,7 @@ func TestMiddlewareNoMethodEnabled(t *testing.T) {
 	w := performRequest(router, "GET", "/")
 
 	// TEST
-	assert.Equal(t, http.StatusMethodNotAllowed, w.Code)
+	assert.Equal(t, 405, w.Code)
 	assert.Equal(t, "ACEGHFDB", signature)
 }
 
@@ -148,7 +147,7 @@ func TestMiddlewareNoMethodDisabled(t *testing.T) {
 	w := performRequest(router, "GET", "/")
 
 	// TEST
-	assert.Equal(t, http.StatusNotFound, w.Code)
+	assert.Equal(t, 404, w.Code)
 	assert.Equal(t, "AC X DB", signature)
 }
 
@@ -160,7 +159,7 @@ func TestMiddlewareAbort(t *testing.T) {
 	})
 	router.Use(func(c *Context) {
 		signature += "C"
-		c.AbortWithStatus(http.StatusUnauthorized)
+		c.AbortWithStatus(401)
 		c.Next()
 		signature += "D"
 	})
@@ -174,7 +173,7 @@ func TestMiddlewareAbort(t *testing.T) {
 	w := performRequest(router, "GET", "/")
 
 	// TEST
-	assert.Equal(t, http.StatusUnauthorized, w.Code)
+	assert.Equal(t, 401, w.Code)
 	assert.Equal(t, "ACD", signature)
 }
 
@@ -184,7 +183,7 @@ func TestMiddlewareAbortHandlersChainAndNext(t *testing.T) {
 	router.Use(func(c *Context) {
 		signature += "A"
 		c.Next()
-		c.AbortWithStatus(http.StatusGone)
+		c.AbortWithStatus(410)
 		signature += "B"
 
 	})
@@ -196,7 +195,7 @@ func TestMiddlewareAbortHandlersChainAndNext(t *testing.T) {
 	w := performRequest(router, "GET", "/")
 
 	// TEST
-	assert.Equal(t, http.StatusGone, w.Code)
+	assert.Equal(t, 410, w.Code)
 	assert.Equal(t, "ACB", signature)
 }
 
@@ -208,7 +207,7 @@ func TestMiddlewareFailHandlersChain(t *testing.T) {
 	router := New()
 	router.Use(func(context *Context) {
 		signature += "A"
-		context.AbortWithError(http.StatusInternalServerError, errors.New("foo"))
+		context.AbortWithError(500, errors.New("foo"))
 	})
 	router.Use(func(context *Context) {
 		signature += "B"
@@ -219,25 +218,25 @@ func TestMiddlewareFailHandlersChain(t *testing.T) {
 	w := performRequest(router, "GET", "/")
 
 	// TEST
-	assert.Equal(t, http.StatusInternalServerError, w.Code)
+	assert.Equal(t, 500, w.Code)
 	assert.Equal(t, "A", signature)
 }
 
 func TestMiddlewareWrite(t *testing.T) {
 	router := New()
 	router.Use(func(c *Context) {
-		c.String(http.StatusBadRequest, "hola\n")
+		c.String(400, "hola\n")
 	})
 	router.Use(func(c *Context) {
-		c.XML(http.StatusBadRequest, H{"foo": "bar"})
+		c.XML(400, H{"foo": "bar"})
 	})
 	router.Use(func(c *Context) {
-		c.JSON(http.StatusBadRequest, H{"foo": "bar"})
+		c.JSON(400, H{"foo": "bar"})
 	})
 	router.GET("/", func(c *Context) {
-		c.JSON(http.StatusBadRequest, H{"foo": "bar"})
+		c.JSON(400, H{"foo": "bar"})
 	}, func(c *Context) {
-		c.Render(http.StatusBadRequest, sse.Event{
+		c.Render(400, sse.Event{
 			Event: "test",
 			Data:  "message",
 		})
@@ -245,6 +244,6 @@ func TestMiddlewareWrite(t *testing.T) {
 
 	w := performRequest(router, "GET", "/")
 
-	assert.Equal(t, http.StatusBadRequest, w.Code)
+	assert.Equal(t, 400, w.Code)
 	assert.Equal(t, strings.Replace("hola\n<map><foo>bar</foo></map>{\"foo\":\"bar\"}{\"foo\":\"bar\"}event:test\ndata:message\n\n", " ", "", -1), strings.Replace(w.Body.String(), " ", "", -1))
 }

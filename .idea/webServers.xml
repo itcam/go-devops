@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="13be4666-20ce-4eb6-ae28-c8ebfccd918e" name="aliyun_back" url="http://47.97.188.130">
+        <fileTransfer host="47.97.188.130" port="33892" rootFolder="/data/data/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="33892" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

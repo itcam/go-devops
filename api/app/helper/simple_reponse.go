@@ -37,13 +37,13 @@ func JSONR(c *gin.Context, code int, dat interface{}, message interface{}) (werr
 	switch msg.(type) {
 
 	case string:
-		body = gin.H{"statusCode": wcode, "data": data, "message": msg.(string)}
+		body = gin.H{"statusCode": wcode, "data": data, "msg": msg.(string)}
 		c.JSON(wcode, body)
 	case error:
-		body = gin.H{"statusCode": wcode, "data": data, "message": msg.(error).Error()}
+		body = gin.H{"statusCode": wcode, "msg": data, "err": msg.(error).Error()}
 		c.JSON(wcode, body)
 	default:
-		body = gin.H{"statusCode": wcode, "data": data, "message": "unknow err"}
+		body = gin.H{"statusCode": wcode, "data": data, "msg": "unknow err"}
 		c.JSON(wcode, body)
 	}
 	return

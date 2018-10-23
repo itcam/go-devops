@@ -5,9 +5,9 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/asaskevich/govalidator"
 	"github.com/gin-gonic/gin"
-	h "go-devops/api/app/helper"
-	"go-devops/api/app/model/uic"
-	"go-devops/api/app/utils"
+	h "github.com/itcam/go-devops/api/app/helper"
+	"github.com/itcam/go-devops/api/app/model/uic"
+	"github.com/itcam/go-devops/api/app/utils"
 	"net/http"
 	"strconv"
 	"time"
@@ -16,7 +16,7 @@ import (
 type APIUserInput struct {
 	UserName string `form:"username" json:"username" binding:"required"`
 	FullName string `form:"fullname" json:"fullname"`
-	PassWord string `form:"password" json:"password" binding:"required"`
+	PassWord string `form:"password" json:"password" binding:"required" valid:"PassPolicy"`
 	Email    string `form:"email" json:"email" binding:"required" valid:"email"`
 	Phone    string `form:"phone" json:"phone" `
 	Role     string `form:"role" json:"role" binding:"required"`
@@ -37,6 +37,14 @@ func CreateUser(c *gin.Context) {
 		return
 
 	}
+
+	govalidator.TagMap["PassPolicy"] = govalidator.Validator(func(str string) bool {
+		if utils.HasLower(str) && utils.HasUpper(str) && utils.HasShuzi(str) && len(str) >= 8 {
+			return true
+		}
+		return false
+	})
+
 	if _, err := govalidator.ValidateStruct(inputs); err != nil {
 		h.JSONR(c, http.StatusBadRequest, "", err)
 		return
@@ -90,6 +98,7 @@ func CreateUser(c *gin.Context) {
 	if inputs.Active == "F" {
 		log.Printf("用户被禁用")
 	}
+
 	password := utils.HashIt(inputs.PassWord)
 
 	user = &uic.User{
@@ -128,6 +137,7 @@ type APIUserUpdateFullNameInput struct {
 }
 
 func UpdateUserFullName(c *gin.Context) {
+
 	var inputs APIUserUpdateFullNameInput
 	err := c.BindJSON(&inputs)
 	if err != nil {
@@ -177,6 +187,8 @@ func UpdateUserEmail(c *gin.Context) {
 		h.JSONR(c, http.StatusExpectationFailed, "", err)
 		return
 	}
+
+	fmt.Println(inputs.Email)
 
 	if _, err := govalidator.ValidateStruct(inputs); err != nil {
 		h.JSONR(c, http.StatusBadRequest, "", err)

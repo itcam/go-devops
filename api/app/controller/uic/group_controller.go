@@ -5,9 +5,9 @@ import (
 	log "github.com/Sirupsen/logrus"
 	"github.com/asaskevich/govalidator"
 	"github.com/gin-gonic/gin"
-	h "go-devops/api/app/helper"
-	"go-devops/api/app/model/uic"
-	"go-devops/api/app/utils"
+	h "github.com/itcam/go-devops/api/app/helper"
+	"github.com/itcam/go-devops/api/app/model/uic"
+	"github.com/itcam/go-devops/api/app/utils"
 	"net/http"
 	"strconv"
 	"time"
@@ -36,8 +36,6 @@ func CreateGroup(c *gin.Context) {
 		return
 	}
 
-	fmt.Println("hhh")
-
 	group := new(uic.Group)
 	//如果不存在表，就建表
 
@@ -46,9 +44,8 @@ func CreateGroup(c *gin.Context) {
 		db.Uic.CreateTable(&group)
 	}
 
-	fmt.Println("create table")
-
 	//查询用户名是否已经存在
+	fmt.Println(inputs.GroupName)
 
 	db.Uic.Table(group.TableName()).Where("group_name = ?", inputs.GroupName).Scan(&group)
 
@@ -59,6 +56,10 @@ func CreateGroup(c *gin.Context) {
 	if group.ID != 0 {
 		h.JSONR(c, http.StatusBadRequest, response, "组名已经存在")
 		return
+	}
+
+	group = &uic.Group{
+		GroupName: inputs.GroupName,
 	}
 
 	//开始创建用户组

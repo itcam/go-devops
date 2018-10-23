@@ -3,8 +3,10 @@ import:
 - package: github.com/Sirupsen/logrus
 - package: github.com/asaskevich/govalidator
 - package: github.com/gin-gonic/gin
+  version: master
 - package: github.com/go-sql-driver/mysql
 - package: github.com/jinzhu/gorm
+  version: master
 - package: github.com/satori/go.uuid
   version: master
 - package: github.com/spf13/viper

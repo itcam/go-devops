@@ -1,4 +1,4 @@
-package protoexample;
+package example;
 
 enum FOO {X=17;};
 

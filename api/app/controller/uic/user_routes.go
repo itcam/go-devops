@@ -2,7 +2,7 @@ package uic
 
 import (
 	"github.com/gin-gonic/gin"
-	"go-devops/api/config"
+	"github.com/itcam/go-devops/api/config"
 )
 
 var db config.DBPool
