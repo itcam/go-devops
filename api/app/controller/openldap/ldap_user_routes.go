@@ -28,5 +28,6 @@ func Routes(r *gin.Engine) {
 	//u.GET("/deluser/:id", DelUser)
 
 	u.POST("/connect", Connect)
+	u.POST("/list", ListUser)
 
 }

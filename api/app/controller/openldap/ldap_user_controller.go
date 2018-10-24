@@ -20,6 +20,7 @@ var (
 	ldapHost = "10.30.10.11"
 	ldapPort = 389
 	BaseDN   = "dc=bihu,dc=inet"
+	UserDN   = "ou=people,dc=bihu,dc=inet"
 	AdUser   = "cn=root,dc=bihu,dc=inet"
 	AdPass   = ""
 	logFile  = "goldap.log"
@@ -50,6 +51,17 @@ type EnTryInput struct {
 	Password string `json:"password" binding:"required"`
 }
 
+type ListInput struct {
+	Filter string `json:"filter" binding:"required"`
+}
+
+type UserAttr struct {
+	CN        string `json:"cn" binding:"required"`
+	Uid       string `json:"uid" binding:"required"`
+	Mail      string `json:"mail" binding:"required"`
+	UidNumber int    `json:"uidnumber" binding:"required"`
+}
+
 func Connect(c *gin.Context) {
 	l, err := ldap.Dial("tcp", fmt.Sprintf("%s:%d", ldapHost, ldapPort))
 	if err != nil {
@@ -64,26 +76,37 @@ func Connect(c *gin.Context) {
 		return
 	}
 
-	err = l.Bind(inputs.Entry, inputs.Password)
+	username := fmt.Sprintf("cn=%s,%s", inputs.UserCN, UserDN)
+	err = l.Bind(username, inputs.Password)
 	if err != nil {
 		log.Error(err)
 		h.JSONR(c, http.StatusExpectationFailed, "绑定用户失败", err)
 		return
 	}
 
-	h.JSONR(c, http.StatusOK, inputs.Entry, "绑定用户成功")
-	log.Info("绑定用户成功")
+	h.JSONR(c, http.StatusOK, inputs.UserCN, "绑定用户成功")
+	log.Info("绑定用户成功: ", username)
 }
 
-func ListUser(l *ldap.Conn, BaseDN, filter string, attr []string) {
+func ListUser(c *gin.Context) {
+	l, err := ldap.Dial("tcp", fmt.Sprintf("%s:%d", ldapHost, ldapPort))
+	if err != nil {
+		h.JSONR(c, http.StatusExpectationFailed, "连接LDAP服务失败", err)
+		return
+	}
+	var inputs ListInput
+	err = c.BindJSON(&inputs)
+	if err != nil {
+		h.JSONR(c, http.StatusExpectationFailed, "", err)
+		return
+	}
 
 	searchRequest := ldap.NewSearchRequest(
 		BaseDN,
 		ldap.ScopeWholeSubtree, ldap.NeverDerefAliases, 0, 0, false,
-		filter,
+		inputs.Filter,
 		//"(&(objectClass=person))",
-		attr,
-		//[]string{"dn", "cn", "mail", "uid", "uidNumber"}, // 列出要查询的属性
+		[]string{"dn", "cn", "mail", "uid", "uidNumber"}, // 列出要查询的属性
 		nil,
 	)
 	sr, err := l.Search(searchRequest)
@@ -91,9 +114,11 @@ func ListUser(l *ldap.Conn, BaseDN, filter string, attr []string) {
 		log.Fatal(err)
 	}
 
+	//var result []map[string]interface{}
 	for _, entry := range sr.Entries {
 		fmt.Printf("%s %v %s %v\n", entry.DN, entry.GetAttributeValue("cn"), entry.GetAttributeValue("mail"), entry.GetAttributeValue("uidNumber"))
 	}
+	//h.JSONR(c, http.StatusOK, inputs.UserCN, "绑定用户成功")
 
 }
 
