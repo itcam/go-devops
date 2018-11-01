@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/controller/openldap/ldap_user_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/controller/openldap/ldap_user_controller.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app/controller/openldap/ldap_user_routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/controller/openldap/ldap_user_routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app/utils/passwd_hash.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/app/utils/passwd_hash.go" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +32,7 @@
     <session id="-1017984936">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -51,14 +52,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="10033" />
+          <entry key="go" value="12248" />
           <entry key="json" value="25" />
           <entry key="yaml" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="10033" />
+          <entry key="Go" value="12248" />
           <entry key="JSON" value="25" />
           <entry key="YAML" value="33" />
         </counts>
@@ -66,17 +67,17 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="git" value="1" />
-          <entry key="go" value="166" />
+          <entry key="go" value="178" />
           <entry key="ini" value="1" />
-          <entry key="json" value="5" />
+          <entry key="json" value="6" />
           <entry key="lock" value="1" />
           <entry key="yaml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="166" />
-          <entry key="JSON" value="5" />
+          <entry key="Go" value="178" />
+          <entry key="JSON" value="6" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="UNKNOWN" value="1" />
           <entry key="YAML" value="1" />
@@ -84,7 +85,7 @@
       </usages-collector>
       <usages-collector id="statistics.go.postfix.template.usages.trigger">
         <counts>
-          <entry key=".append" value="2" />
+          <entry key=".append" value="3" />
           <entry key=".p" value="5" />
           <entry key=".panic" value="1" />
           <entry key=".print" value="1" />
@@ -141,28 +142,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/app/controller/openldap/ldap_user_controller.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2222">
-              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
-              <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/app/controller/openldap/ldap_user_routes.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="-77">
+              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -172,8 +155,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -193,6 +176,9 @@
       <find>gin</find>
       <find>list</find>
       <find>log</find>
+      <find>BindAdUser</find>
+      <find>B1hu123</find>
+      <find>len</find>
     </findStrings>
     <replaceStrings>
       <replace>Group</replace>
@@ -205,8 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/setting/setting.go" />
-        <option value="$PROJECT_DIR$/pkg/e/msg.go" />
         <option value="$PROJECT_DIR$/middleware/jwt/jwt.go" />
         <option value="$PROJECT_DIR$/pkg/e/cache.go" />
         <option value="$PROJECT_DIR$/pkg/e/code.go" />
@@ -242,7 +226,6 @@
         <option value="$PROJECT_DIR$/api/app/model/uic/user_group.go" />
         <option value="$PROJECT_DIR$/glide.lock" />
         <option value="$PROJECT_DIR$/api/app/model/uic/group.go" />
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/glide.yaml" />
         <option value="$PROJECT_DIR$/api/app/controller/uic/user_routes.go" />
         <option value="$PROJECT_DIR$/api/app/controller/uic/group_controller.go" />
@@ -254,8 +237,11 @@
         <option value="$PROJECT_DIR$/api/app/controller/ldap/ldap_user_routes.go" />
         <option value="$PROJECT_DIR$/api/app/controller/routes.go" />
         <option value="$PROJECT_DIR$/api/app/helper/simple_reponse.go" />
-        <option value="$PROJECT_DIR$/api/app/controller/openldap/ldap_user_routes.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/api/app/utils/passwd_hash.go" />
+        <option value="$PROJECT_DIR$/api/app/utils/mail.go" />
         <option value="$PROJECT_DIR$/api/app/controller/openldap/ldap_user_controller.go" />
+        <option value="$PROJECT_DIR$/api/app/controller/openldap/ldap_user_routes.go" />
       </list>
     </option>
   </component>
@@ -304,31 +290,7 @@
             <path>
               <item name="go-devops" type="b2602c69:ProjectViewProjectNode" />
               <item name="go-devops" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-devops" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-devops" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-devops" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-devops" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="openldap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="go-devops" type="b2602c69:ProjectViewProjectNode" />
-              <item name="go-devops" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="uic" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -545,8 +507,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27737752" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1167147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -555,13 +518,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49732333" weight="0.32896066" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7204611" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8378962" weight="0.5376079" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.2795389" side_tool="true" visible="true" weight="0.10850801" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.7197406" weight="0.4081381" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.28242075" side_tool="true" visible="true" weight="0.28729963" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.71757925" visible="true" weight="0.28729963" />
       <window_info anchor="bottom" id="RemoteSynchronizer" order="9" sideWeight="0.49892932" weight="0.32896066" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.49732333" weight="0.21291624" />
@@ -653,7 +616,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../spf13/afero/util.go" />
     <entry file="file://$PROJECT_DIR$/../../masato25/yaag/gin/middleware.go" />
     <entry file="file://$PROJECT_DIR$/cfg.json" />
     <entry file="file://$PROJECT_DIR$/../../satori/go.uuid/generator.go" />
@@ -661,7 +623,6 @@
     <entry file="file://D:/golang.org/x/sys/unix/fcntl.go" />
     <entry file="file://$PROJECT_DIR$/api/app/helper/session.go" />
     <entry file="file://$PROJECT_DIR$/api/conf/app.ini" />
-    <entry file="file://$PROJECT_DIR$/config/cfg.json" />
     <entry file="file://$PROJECT_DIR$/api/app/model/uic/relation_group_user.go" />
     <entry file="file://$PROJECT_DIR$/../../spf13/viper/viper.go" />
     <entry file="file://$PROJECT_DIR$/../../asaskevich/govalidator/validator.go" />
@@ -718,13 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/utils/uuid.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/config/database.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="382">
@@ -766,31 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/utils/passwd_hash.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/glide.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/utils/auth_middle.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/utils/validate.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="37" selection-start-line="37" selection-end-line="42" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -822,13 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/helper/pagging_parser.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/controller/uic/user_controller.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
@@ -853,13 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/controller/routes.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="https://github.com/yunlzheng/alertmanaer-dingtalk-webhook.git">
       <provider selected="true" editor-type-id="httpFileEditor" />
     </entry>
@@ -870,24 +789,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/app/controller/openldap/ldap_user_controller.go">
+    <entry file="file://$PROJECT_DIR$/config/cfg.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/helper/pagging_parser.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2222">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="44">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
+    <entry file="file://$PROJECT_DIR$/api/app/utils/validate.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="68" column="7" selection-start-line="68" selection-start-column="7" selection-end-line="68" selection-end-column="7" />
+        <state relative-caret-position="814">
+          <caret line="37" selection-start-line="37" selection-end-line="42" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/utils/mail.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#15#102#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/app/controller/openldap/ldap_user_routes.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        <state relative-caret-position="233">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="e#18#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/controller/openldap/ldap_user_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="e#18#333#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/controller/routes.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/utils/passwd_hash.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="17" />
+          <folding>
+            <element signature="e#605#702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/utils/auth_middle.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#15#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/app/utils/uuid.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="e#605#655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77">
+          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
         </state>
       </provider>
     </entry>

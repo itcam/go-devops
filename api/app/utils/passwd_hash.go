@@ -16,6 +16,7 @@ package utils
 
 import (
 	log "github.com/Sirupsen/logrus"
+	"github.com/sethvargo/go-password/password"
 	"github.com/spf13/viper"
 	"github.com/toolkits/str"
 )
@@ -28,4 +29,12 @@ func HashIt(passwd string) (hashed string) {
 	}
 	hashed = str.Md5Encode(salt + passwd)
 	return
+}
+
+func GeneratePass(length int) string {
+	res, err := password.Generate(length, 5, 0, false, true)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return res
 }
